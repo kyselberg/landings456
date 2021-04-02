@@ -1,0 +1,31 @@
+header.header
+    .header__top-panel.top-panel
+        .top-panel__logo
+            a.top-panel__logo-link.logo-link.link(href='#')
+                img.logo-link__img(src='img/cloud.svg', alt='cloud')
+                p.logo-link__text CloudBudget
+        nav.top-panel__nav.nav
+            ul.nav__list.list
+                 -
+                    var linkArr = [
+                         {href: '#overview', text: 'overview'},
+                         {href: '#features', text: 'features'},
+                         {href: '#technology', text: 'technology'},
+                         {href: '#contact', text: 'contact'},
+                         {href: '#', text: 'sign up'},
+                     ]
+                 each link in linkArr
+                    li.list__item
+                        a.link(href=link.href) #{link.text}
+        .wrapper
+            .top-panel__lang.lang
+                img.lang__img(src='img/usa.svg', alt='english')
+                p.lang__name en
+            a.top-panel__button.button.link(href='#') login
+    .header__bottom-panel.bottom-panel
+        .bottom-panel__wrapper
+            h1.bottom-panel__title CloudBudget
+            p.bottom-panel__description.
+                Cloud budget management for everyone.
+                Only €69.95 a Month After a 7 Day Trial of Up to €4.99
+            a.bottom-panel__button.button.link(href='#') Sign Up

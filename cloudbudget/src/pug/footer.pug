@@ -1,0 +1,49 @@
+mixin slItem(LINK, TEXT)
+    li.services__list-item
+        a.link.text(href=LINK)= TEXT
+
+mixin clItem(LINK, imgSRC, ALT)
+    li.contact__list-item
+        a.link(href=LINK)
+            img(src=imgSRC, alt=ALT)
+
+footer.footer
+    .footer__wrapper.info
+        .info__address
+            h3.info__address-title.title Address
+            address.info__address-address.text
+                | Pipang Ltd, Griva Digeni,
+                br
+                |81-83 Jacovides Tower, 1st Floor
+                br
+                |1090 Picosia USA
+        .info__services
+            h3.info__services-title.title Services
+            ul.info__services-list.services__list
+                -
+                  var servicesList = [
+                      {link: '#', text: 'Overview'},
+                      {link: '#', text: 'Features'},
+                      {link: '#', text: 'Technology'},
+                      {link: '#', text: 'Terms & Conditions'},
+                      {link: '#', text: 'Privacy'},
+                  ]
+                each item in servicesList
+                  +slItem(item.link, item.text)
+        .info__contact
+            h3.info__contact-title.title Get in Touch
+            a.link.info__contact-link.text(href='mailto:info@cloudbudget.com') info@cloudbudget.com
+            a.link.info__contact-link.text(href='tel:+18447217120') +1 844-721-7120
+            ul.info__contact-list.contact__list.list
+                -
+                  var contactList = [
+                      {link: '#', imgSrc: 'img/facebook.svg', alt: 'facebook icon link'},
+                      {link: '#', imgSrc: 'img/linkedin.svg', alt: 'linkedin icon link'},
+                      {link: '#', imgSrc: 'img/twitter.svg', alt: 'twitter icon link'},
+                  ]
+                each item in contactList
+                  +clItem(item.link, item.imgSrc, item.alt)
+        .info__support
+            h3.info__support-title.title We Support
+            img(src='img/banks.png', alt='visa, master card')
+    p.footer__copy-info &copy; 2018 CloudBudget

@@ -1,0 +1,41 @@
+@import "variables";
+@import "header";
+@import "video";
+@import "features";
+@import "technology";
+@import "cta";
+@import "contact";
+@import "footer";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  display: block;
+  border-radius: 6px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: $title-size;
+  margin-bottom: 60px;
+}

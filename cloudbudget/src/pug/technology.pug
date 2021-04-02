@@ -1,0 +1,46 @@
+mixin blockTemplate(COUNTER, imgSRC, ALT, TITLE, DESCRIPTION)
+    .background__block
+        p.background__block-number= COUNTER
+        .technology__content
+            img.technology__content-img(src=imgSRC, alt=ALT)
+            h3.technology__content-title= TITLE
+            p.technology__content-description= DESCRIPTION
+
+section.section__technology#technology
+    h2.section__technology-title.title Technology
+    .section__technology-wrapper
+        -
+            var blockInfo = [
+                {
+                    imgSrc: 'img/cloud-storage.svg',
+                    alt: 'cloud icon',
+                    title: 'Cloud Storage',
+                    description: 'Access your account from anywhere in the world on any device'
+                },
+                {
+                    imgSrc: 'img/secure.svg',
+                    alt: 'shield icon',
+                    title: 'Secure',
+                    description: 'All your information is stored on secure cloud servers'
+                },
+                {
+                    imgSrc: 'img/pdf-download.svg',
+                    alt: 'pdf file icon',
+                    title: 'PDF Download',
+                    description: 'Download any of your reports in PDF format'
+                },
+                {
+                    imgSrc: 'img/csv-download.svg',
+                    alt: 'csv file icon',
+                    title: 'CSV Download',
+                    description: 'All your information is stored on secure cloud servers'
+                },
+            ]
+        each block, index in blockInfo
+          +blockTemplate(
+            '0' + (index+1),
+            block.imgSrc,
+            block.alt,
+            block.title,
+            block.description
+          )

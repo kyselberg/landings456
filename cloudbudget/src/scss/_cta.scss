@@ -1,0 +1,47 @@
+.section__cta {
+  color: #FFF;
+  padding: 95px 170px;
+  background: $brand-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .content {
+    width: 481px;
+    &__description {
+      font-weight: normal;
+      font-size: .875rem;
+      line-height: 140%;
+      margin-bottom: 42px;
+    }
+
+    &__list {
+      .platforms__item {
+        margin-right: 22px;
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .media {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+
+    &-next, &-prev {
+      position: absolute;
+      z-index: -1;
+    }
+
+    &-next {
+      left: -10%;
+    }
+    &-prev {
+      right: -10%;
+    }
+  }
+}

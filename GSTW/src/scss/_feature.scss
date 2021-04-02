@@ -1,0 +1,42 @@
+.section__feature {
+  background: $gray;
+  display: flex;
+  align-items: center;
+
+  &-img {
+    background: url('img/background-2.png');
+    padding: 381px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+  }
+
+  .feature-cta {
+    width: 50%;
+    padding: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+
+    &__title {
+      @include title()
+    }
+
+    &__text {
+      width: 80%;
+      margin-bottom: 40px;
+    }
+
+    &__button {
+      @include button($orange, transparent);
+
+      &:hover {
+        @include button(#fff, $orange);
+        border: 2px solid $gray;
+      }
+    }
+  }
+}

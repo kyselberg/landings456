@@ -1,0 +1,45 @@
+@import "~normalize.css";
+@import "variables";
+@import "mixins";
+@import "header";
+@import "hero";
+@import "feature";
+@import "gifts";
+@import "cta";
+@import "blog";
+@import "footer";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $popin;
+}
+
+.text {
+  line-height: 28.13px;
+  font-size: $text;
+  font-weight: 400;
+}
+
+.logo {
+  font-family: "Homemade Apple", sans-serif;
+  font-size: 1rem;
+}
+
+.link {
+  text-decoration: none;
+  display: block;
+}
+
+.button {
+  border-radius: 5px;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+}

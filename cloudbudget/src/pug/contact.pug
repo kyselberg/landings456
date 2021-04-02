@@ -1,0 +1,35 @@
+section.section__contact#contact
+    .section__contact-content.content
+        h2.title.content__title Contact
+        p.content__description.
+            Questions or concerns? Just fill out the form below
+            and our support team will get back to you within 24 hours.
+    .section__contact-form.form
+        form
+            .name-input
+                input(
+                    type='text'
+                    class='input first-name'
+                    placeholder='First Name'
+                )
+                input(
+                    type='text'
+                    class='input last-name'
+                    placeholder='Last Name'
+                )
+            input(
+                type='tel'
+                class='input phone-number'
+                placeholder='Phone Number'
+            )
+            select(
+                name='services'
+                class='input select'
+                id='services'
+            )
+                option(value='0') Select Service
+            input(
+                type='submit'
+                class='submit-button'
+                value='Submit now'
+            )

@@ -1,0 +1,43 @@
+.section__hero {
+  background: $gray;
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+  &-cta-zone {
+    width: 50%;
+    padding: 150px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    .hero-cta-zone__title {
+      font-size: $hero-title;
+      margin-bottom: 36px;
+    }
+
+    .hero-cta-zone__text {
+      width: 80%;
+      margin-bottom: 65px;
+    }
+
+    .hero-cta-zone__button {
+      @include button(#fff, $orange);
+      border: 2px solid $gray;
+
+      &:hover {
+        @include button($orange, transparent)
+      }
+    }
+  }
+
+  &-img {
+    background: url('img/background-1.png');
+    background-position: center;
+    background-size: cover;
+    width: 50%;
+    padding: 381px;
+  }
+}

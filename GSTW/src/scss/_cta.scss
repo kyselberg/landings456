@@ -1,0 +1,43 @@
+.section__cta {
+  padding: 81px 235px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $orange;
+
+  &-text-group {
+    .text__group_prime {
+      font-weight: bold;
+      font-size: $header;
+    }
+    .text__group_second {
+      font-weight: normal;
+      font-size: $header;
+    }
+  }
+
+  &-button-group {
+    display: flex;
+
+    .section__cta-button {
+      &_filled {
+        @include button(#fff, $dark-gray);
+        border: 2px solid $dark-gray;
+        margin-right: 16px;
+
+        &:hover {
+          @include button($dark-gray, #fff);
+        }
+      }
+
+      &_transparent {
+        @include button($dark-gray, transparent);
+
+        &:hover {
+          @include button($dark-gray, #fff);
+          border: 2px solid $dark-gray;
+        }
+      }
+    }
+  }
+}

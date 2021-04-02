@@ -1,0 +1,21 @@
+@mixin button($color, $background) {
+  text-decoration: none;
+  font-size: $button-size;
+  padding: 10px 25px;
+  color: $color;
+  background: $background;
+  border: 2px solid $color;
+  transition: .3s all;
+  font-weight: 300;
+}
+
+@mixin title {
+  font-size: $header;
+  margin-bottom: 36px;
+  font-weight: 400;
+}
+
+@mixin quote {
+  font-size: $gifts-text;
+  margin-bottom: 64px;
+}

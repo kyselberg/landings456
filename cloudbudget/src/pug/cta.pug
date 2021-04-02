@@ -1,0 +1,29 @@
+mixin iconLink(LINK, imgSRC, ALT)
+    li.platforms__item
+        a.link(href=LINK)
+            img(src=imgSRC, alt=ALT)
+
+section.section__cta
+    .section__cta-content.content
+        h2.title.content__title Stay focused on saving money
+        p.content__description.
+            It is important to stay focused on saving money in any way you can.
+            We help you monitor your spending habits so you can easily spot
+            and cut any unnecessary expenses. Simply join today to get started!
+        ul.list.content__list.platforms
+            -
+                var linkArr = [
+                    {link: '#', imgSrc: 'img/google-icon.svg', alt: 'google icon'},
+                    {link: '#', imgSrc: 'img/app-store-icon.svg', alt: 'app store icon'},
+                    {link: '#', imgSrc: 'img/windows-icon.svg', alt: 'windows icon'},
+                ]
+            each link in linkArr
+              +iconLink(
+                link.link,
+                link.imgSrc,
+                link.alt
+              )
+    .section__cta-media.media
+        img.media-curr(src='img/cta-bg-1.png')
+        img.media-next(src='img/cta-bg-2.png')
+        img.media-prev(src='img/cta-bg-3.png')

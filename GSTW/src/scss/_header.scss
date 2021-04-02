@@ -1,0 +1,25 @@
+.header {
+  background: $ivory;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 50px;
+  &__logo{
+    color: $dark-gray;
+  }
+  .list {
+    .link {
+      font-size: $header-link;
+      color: #000;
+      margin-left: 45px;
+    }
+  }
+  .header__button {
+    @include button($orange, transparent);
+
+    &:hover {
+      @include button(#fff, $orange);
+      border: 2px solid $ivory;
+    }
+  }
+}

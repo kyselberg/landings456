@@ -1,0 +1,27 @@
+mixin card(TITLE, DESCRIPTION, LINK)
+    .feature__block
+        h3.feature__title= TITLE
+        p.feature__description= DESCRIPTION
+        a.link.feature__link(href=LINK) Read More
+
+section.section__features#features
+    h2.section__features-title.title Features
+    .section__features-wrapper
+        .background__block.bg-1
+            +card(
+                'Supports All Currencies and Cards',
+                'We support all popular currencies and is fully customizable to add.',
+                '#'
+            )
+        .background__block.bg-2
+            +card(
+                'Manage your expenses on the go',
+                'You can access your account from anywhere in the world on any device.',
+                '#'
+            )
+        .background__block.bg-3
+            +card(
+                'Cloud Budget Management Software',
+                'Our software is made so you can access and manage your budget.',
+                '#'
+            )

@@ -1,0 +1,54 @@
+.footer {
+  padding: 85px 170px;
+  background: $additional-color;
+
+  &__copy-info {
+    font-size: .75rem;
+    line-height: 14px;
+    color: $title-color;
+
+  }
+
+  .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 85px;
+
+    .title {
+      font-weight: bold;
+      font-size: 1.125rem;
+      line-height: 22px;
+      color: $title-color;
+      margin-bottom: 30px;
+    }
+
+    .text {
+      font-size: .75rem;
+      font-style: normal;
+      line-height: 18px;
+    }
+
+    &__address {
+      font-style: normal;
+    }
+
+    &__services {
+      &-list {
+        list-style: none;
+      }
+    }
+
+    &__contact {
+      &-link{
+        display: block;
+        margin-bottom: 11px;
+      }
+      .contact__list {
+        &-item {
+          margin-right: 12px;
+        }
+      }
+    }
+  }
+}

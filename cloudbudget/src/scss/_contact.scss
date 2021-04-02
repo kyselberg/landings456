@@ -1,0 +1,55 @@
+.section__contact {
+  padding: 120px 170px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .content {
+    width: 430px;
+
+    &__description {
+      font-size: .875rem;
+    }
+  }
+
+  .form {
+    .name-input {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .last-name {
+        margin-right: 0;
+      }
+    }
+
+    .input {
+      padding: 20px 30px;
+      border-radius: 6px;
+      border: 2px solid #333333;
+      font-size: 1rem;
+      color: rgba(19, 39, 67, 0.5);
+      margin: 0 30px 24px 0;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .phone-number, .select {
+      display: block;
+      width: 100%;
+    }
+
+    .submit-button {
+      padding: 17px 34px;
+      font-family: inherit;
+      border-radius: 6px;
+      border: none;
+      background: $brand-color;
+      font-size: .875rem;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      cursor: pointer;
+    }
+  }
+}

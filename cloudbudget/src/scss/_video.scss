@@ -1,0 +1,51 @@
+.section__video {
+  padding: 94px 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .content {
+    width: 610px;
+    margin-right: 50px;
+
+    &__description {
+      font-weight: 400;
+      font-size: .875rem;
+      line-height: 19.6px;
+      margin-bottom: 20px;
+    }
+
+    &__link {
+      color: $brand-color;
+      font-weight: 400;
+      font-size: .875rem;
+    }
+  }
+
+  &-media {
+    position: relative;
+    background: url("img/video-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    width: 600px;
+    height: 311px;
+    margin-left: 50px;
+
+    &::before {
+      content: url("img/arrow-right.svg");
+      width: 66px;
+      height: 66px;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      border-radius: 50%;
+      background: $brand-color;
+      cursor: pointer;
+    }
+  }
+}

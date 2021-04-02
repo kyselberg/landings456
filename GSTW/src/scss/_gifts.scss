@@ -1,0 +1,63 @@
+.section__gifts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 96px 135px;
+
+  &-header {
+    @include title();
+  }
+
+  &-text {
+    @include quote();
+  }
+
+  &-cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+
+    .card {
+      margin-right: 30px;
+      box-shadow: none;
+      transition: .3s;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover {
+        box-shadow: 1px 1px 20px 1px rgba(0,0,0,.2);
+      }
+
+      &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 24px;
+
+        .content__title {
+          margin-bottom: 74px;
+        }
+
+        .content__link {
+          text-transform: capitalize;
+          font-size: $more-link;
+          color: #000000;
+        }
+      }
+    }
+  }
+}
+
+@for $i from 1 through 4 {
+  .img-#{$i} {
+    background: url("img/gift-#{$i}.png");
+    background-size: cover;
+    width: 270px;
+    height: 270px;
+  }
+}
